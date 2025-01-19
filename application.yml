@@ -1,13 +1,14 @@
 spring:
   application:
-    name: USER-SERVICE-config
+    name: USER-SERVICE # Corrected application name (remove "-config" unless it's intentional)
+
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
+    register-with-eureka: true # Enables this application to register itself with Eureka
+    fetch-registry: true       # Enables this application to fetch the Eureka registry
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/ # URL of the Eureka Server
 
 logging:
   level:
-    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.gateway: DEBUG # DEBUG level logging for Gateway-related activities
